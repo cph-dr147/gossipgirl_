@@ -1,3 +1,4 @@
+package com.example.gossipgirl_;
 import java.util.ArrayList;
 import java.util.Scanner;
 

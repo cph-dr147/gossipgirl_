@@ -8,7 +8,14 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+            fx:controller="com.example.gossipgirl_.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="10.0" layoutX="50" layoutY="50">
+    <Button fx:id="backButton" text="Back" />
+    <Label fx:id="loginText" text="Login"/>
+    <TextField text="Username" />
+    <TextField text="Password" />
+    <Button text="login :-)" onAction="#onLoginButtonClick" />
+</VBox>
 
 </AnchorPane>

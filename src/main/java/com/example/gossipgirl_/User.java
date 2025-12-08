@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package com.example.gossipgirl_;
 
 public class User {
 

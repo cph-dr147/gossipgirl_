@@ -6,11 +6,23 @@
 
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      style="-fx-background-color:rgb(210,101,219);"
       fx:controller="com.example.gossipgirl_.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText"/>
+
+    <Label text="Gossip Girl" style="-fx-font-size: 48px; -fx-text-fill: black; -fx-font-family: Serif; -fx-font-weight: normal;">
+    <VBox.margin>
+    <Insets top="-50"/>
+    </VBox.margin>
+</Label>
+
+
+    <Button text="login" onAction="#onLoginButtonClick" style="-fx-background-color: rgb(210,101,219); -fx-text-fill: #ffffff;"/>
+    <Button text="signup" onAction="#onSignupButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
 </VBox>
+
+
