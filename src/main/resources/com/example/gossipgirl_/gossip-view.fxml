@@ -14,7 +14,7 @@
 
     <VBox>
 
-<Button text="Go to gossip" onAction="#onGotogossipButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
+<Button text="Peek at the secrets 🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
 </VBox>
 
 </AnchorPane>

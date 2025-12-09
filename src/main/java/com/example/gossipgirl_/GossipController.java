@@ -6,7 +6,8 @@ import javafx.fxml.FXML;
 public class GossipController {
     @FXML
 
-    public void onGotogossipButtonClick(ActionEvent actionEvent) {
+
+    public void onPeekatthesecretsButtonClick(ActionEvent actionEvent) {
     }
 }
 
