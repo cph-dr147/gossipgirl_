@@ -35,22 +35,7 @@ public class SignUp {
         System.out.println("User created successfully!");
     }
 
-    public boolean askForSubscription() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Would you like to add subscribe?");
 
-        while (true) {
-            String answer = input.next();
-            if (answer.equalsIgnoreCase("y")) {
-                return true;
-            }
-            else if (answer.equalsIgnoreCase("n")) {
-                return false;
-            }
-            else {
-                System.out.println("please answer either yes (y) or no (n)");
-            }
-        }
     }
-}
+
 
