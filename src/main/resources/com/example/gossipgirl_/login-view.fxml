@@ -8,17 +8,15 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.gossipgirl_.SignupController"
+            fx:controller="com.example.gossipgirl_.LoginController"
+            style="-fx-background-color:rgb(210,101,219);"
             prefHeight="400.0" prefWidth="600.0">
-
     <VBox spacing="10.0" layoutX="50" layoutY="50">
-
     <Button fx:id="backButton" text="Back" />
-    <Label fx:id="signupText" text="Signup"/>
-    <TextField text="Email" />
+    <Label fx:id="loginText" text="Login"/>
     <TextField text="Username" />
     <TextField text="Password" />
-    <Button text="Sign Up!" onAction="#onSignupButtonClick"/>
+    <Button text="login💋" onAction="#onLoginButtonClick" />
 </VBox>
 
 </AnchorPane>

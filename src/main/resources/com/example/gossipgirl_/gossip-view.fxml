@@ -8,14 +8,13 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.gossipgirl_.LoginController"
+            fx:controller="com.example.gossipgirl_.GossipController"
+            style="-fx-background-color:rgb(210,101,219);"
             prefHeight="400.0" prefWidth="600.0">
-    <VBox spacing="10.0" layoutX="50" layoutY="50">
-    <Button fx:id="backButton" text="Back" />
-    <Label fx:id="loginText" text="Login"/>
-    <TextField text="Username" />
-    <TextField text="Password" />
-    <Button text="login :-)" onAction="#onLoginButtonClick" />
+
+    <VBox>
+
+<Button text="Go to gossip" onAction="#onGotogossipButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
 </VBox>
 
 </AnchorPane>

@@ -24,9 +24,7 @@ public class LogIn {
             if (u.getUserName().equals(username) && u.getPassword().equals(password)) {
                 System.out.println("Login successful! Welcome " + username);
                 return u;
-                //Loop through each user in the list.
-                //Check if the username and password match the input.
-                //If a match is found: print a welcome message and return that user.
+
             }
         }
         System.out.println("Invalid username or password."); // prints error massage if no user match found
