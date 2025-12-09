@@ -14,7 +14,6 @@
 
     <VBox>
 
-<Button text="Peek at the secrets 🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
 </VBox>
 
 </AnchorPane>
