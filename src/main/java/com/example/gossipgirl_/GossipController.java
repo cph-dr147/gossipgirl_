@@ -1,5 +1,6 @@
 package com.example.gossipgirl_;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -48,6 +49,10 @@ public class GossipController {
     private void onPeekatthesecretsButtonClick() {
         System.out.println("Peek button clicked");
     }
+    @FXML
+    private void onBack() {
+        ViewSwitcher.switchTo(View.START);
+    }
 
 ////    @FXML
 ////    public void onPeekatthesecretsButtonClick() {
@@ -84,6 +89,8 @@ private void onSendGossip() {
     gossipTextArea.clear();
 }
 
+    public void onBack(ActionEvent actionEvent) {
     }
+}
 
 

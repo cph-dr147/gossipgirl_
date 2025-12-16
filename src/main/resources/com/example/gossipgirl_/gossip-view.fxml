@@ -12,7 +12,19 @@
             style="-fx-background-color:rgb(202,92,202);"
             prefHeight="400.0" prefWidth="600.0">
 
-    <Button text="Peek at the secrets🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #ca5cca; -fx-text-fill: #d265db;"/>
+    <Button text="← back"
+            onAction="#onBack"
+            AnchorPane.topAnchor="15"
+            AnchorPane.rightAnchor="15"
+            style="
+            -fx-background-color: transparent;
+            -fx-text-fill: rgba(253,253,253,0.95);
+            -fx-font-size: 14px;
+            -fx-font-weight: bold;
+        "/>
+
+
+    <Button text="Peek at the secrets🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #ca5cca; -fx-text-fill: rgba(253,253,253,0.98);"/>
     <TextArea fx:id="chatDisplay"
               editable="false"
               wrapText="true"

@@ -25,8 +25,11 @@ public class ViewSwitcher {
             stage.setScene(new Scene(root));
 
         } catch (Exception e) {
-            System.out.println("❌ Failed to load view: " + view);
+            System.out.println(" Failed to load view: " + view);
             e.printStackTrace();
         }
+    }
+
+    public static void setScene(Scene scene) {
     }
 }

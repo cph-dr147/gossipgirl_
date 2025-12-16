@@ -5,25 +5,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+public class HelloApplication extends Application {
 
-//public class HelloApplication extends Application {
-    //@Override
-    //public void start(Stage stage) throws IOException {
-        //  Connect to SQLite at startup
-        //DBconnector.getConnection();
-        //System.out.println(new java.io.File("console.sql").getAbsolutePath());
+    @Override
+    public void start(Stage stage) throws Exception {
 
-        // Load FXML and create scene
-       // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-       // Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        //stage.setTitle("Hello!");
+        FXMLLoader loader =
+                new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
 
-        // Use your ViewSwitcher logic
-       // ViewSwitcher.setScene(scene);
-       // ViewSwitcher.switchTo(View.START);
+        Scene scene = new Scene(loader.load(), 600, 400);
 
-       // stage.setScene(scene);
-       // stage.show();
-    //}
-//}
+        // 🔁 ViewSwitcher bruges til AL navigation
+        ViewSwitcher.setScene(scene);
+        ViewSwitcher.switchTo(View.START);
+
+        stage.setTitle("Gossip Girl");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}

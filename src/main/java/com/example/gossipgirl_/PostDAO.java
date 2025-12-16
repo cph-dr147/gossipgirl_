@@ -13,10 +13,10 @@ public class PostDAO {
         List<String> posts = new ArrayList<>();
 
         String sql = """
-                SELECT u.username, p.message
+                SELECT u.username, p.Message
                 FROM Posts p
-                JOIN Users u ON p.user_id = u.UserID
-                ORDER BY p.id ASC
+                JOIN Users u ON p.UserId = u.UserID
+                ORDER BY PostId ASC
                 """;
 
         try (Connection conn = DBconnector.getConnection();
@@ -35,7 +35,7 @@ public class PostDAO {
     }
 
     public void savePost(int userId, String message) {
-        String sql = "INSERT INTO Posts (user_id, message) VALUES (?, ?)";
+        String sql = "INSERT INTO Posts (UserId, Message) VALUES (?, ?)";
 
         try (Connection conn = DBconnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
