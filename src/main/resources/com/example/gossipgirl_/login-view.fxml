@@ -11,12 +11,19 @@
             fx:controller="com.example.gossipgirl_.LoginController"
             style="-fx-background-color:rgb(210,101,219);"
             prefHeight="400.0" prefWidth="600.0">
+
     <VBox spacing="10.0" layoutX="50" layoutY="50">
-    <Button fx:id="backButton" text="Back" />
+        <Button fx:id="backButton"
+                text="Back"
+                onAction="#onBackButtonClick"/>
     <Label fx:id="loginText" text="Login"/>
-    <TextField text="Username" />
-    <TextField text="Password" />
+    <TextField fx:id="usernameField" promptText="Username" />
+    <TextField fx:id="passwordField" promptText="Password" />
     <Button text="login💋" onAction="#onLoginButtonClick" />
+
 </VBox>
 
+
 </AnchorPane>
+
+

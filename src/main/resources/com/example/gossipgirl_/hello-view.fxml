@@ -1,28 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      style="-fx-background-color:rgb(210,101,219);"
-      fx:controller="com.example.gossipgirl_.HelloController">
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.gossipgirl_.HelloController"
+      alignment="CENTER"
+      spacing="25"
+      style="-fx-background-color: #d86cd6;">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets top="40" right="40" bottom="40" left="40"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
+    <!-- TITLE -->
+    <Label text="Gossip Girl"
+           style="
+           -fx-font-size: 64px;
+           -fx-font-family: 'Playfair Display', Serif;
+           -fx-text-fill: black;
+           "/>
 
-    <Label text="Gossip Girl" style="-fx-font-size: 48px; -fx-text-fill: black; -fx-font-family: Serif; -fx-font-weight: normal;">
-    <VBox.margin>
-    <Insets top="-50"/>
-    </VBox.margin>
-</Label>
+    <!-- TAGLINE -->
+    <Label text="Spotted. Exposed. Discussed."
+           style="
+           -fx-font-size: 14px;
+           -fx-text-fill: rgba(0,0,0,0.65);
+           -fx-letter-spacing: 2px;
+           "/>
 
+    <!-- CARD -->
+    <VBox spacing="20"
+          alignment="CENTER"
+          style="
+          -fx-background-color: white;
+          -fx-padding: 30;
+          -fx-background-radius: 20;
+          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 25, 0, 0, 10);
+          ">
 
-    <Button text="login" onAction="#onLoginButtonClick" style="-fx-background-color: rgb(210,101,219); -fx-text-fill: #ffffff;"/>
-    <Button text="signup" onAction="#onSignupButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
+        <Label text="You know you love me."
+               style="
+               -fx-font-size: 14px;
+               -fx-text-fill: rgba(0,0,0,0.7);
+               "/>
+
+        <!-- LOGIN BUTTON -->
+        <Button text="login"
+                onAction="#onLogin"
+                style="
+                -fx-background-color: black;
+                -fx-text-fill: white;
+                -fx-background-radius: 30;
+                -fx-padding: 10 40;
+                -fx-font-size: 14px;
+                -fx-letter-spacing: 1px;
+                "/>
+
+        <!-- SIGNUP BUTTON -->
+        <Button text="sign up"
+                onAction="#onSignup"
+                style="
+                -fx-background-color: transparent;
+                -fx-border-color: black;
+                -fx-border-radius: 30;
+                -fx-text-fill: black;
+                -fx-padding: 10 40;
+                -fx-font-size: 14px;
+                "/>
+
+        <Label text="All posts are anonymous."
+               style="
+               -fx-font-size: 11px;
+               -fx-text-fill: rgba(0,0,0,0.5);
+               "/>
+    </VBox>
+
+    <!-- FOOTER -->
+    <Label text="xoxo gossip girl 💋"
+           style="
+           -fx-font-size: 12px;
+           -fx-text-fill: rgba(0,0,0,0.6);
+           "/>
+
 </VBox>
-
-

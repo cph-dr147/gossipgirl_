@@ -1,23 +1,29 @@
 package com.example.gossipgirl_;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    protected void onLoginButtonClick() {
-        welcomeText.setText("login");
-        ViewSwitcher.switchTo(View.LOGIN);
-
+    private Stage getStage(ActionEvent event) {
+        return (Stage) ((javafx.scene.Node) event.getSource())
+                .getScene().getWindow();
     }
 
-    @FXML
-    protected void onSignupButtonClick() {
-        welcomeText.setText("signup");
-        ViewSwitcher.switchTo(View.SIGNUP);
+    public void onLogin(ActionEvent event) throws Exception {
+        Parent root = FXMLLoader.load(
+                getClass().getResource("/com/example/gossipgirl_/login-view.fxml")
+        );
+        getStage(event).setScene(new Scene(root));
+    }
 
+    public void onSignup(ActionEvent event) throws Exception {
+        Parent root = FXMLLoader.load(
+                getClass().getResource("/com/example/gossipgirl_/signup-view.fxml")
+        );
+        getStage(event).setScene(new Scene(root));
     }
 }

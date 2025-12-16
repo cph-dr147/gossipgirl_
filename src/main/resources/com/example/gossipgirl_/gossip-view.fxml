@@ -9,10 +9,18 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.gossipgirl_.GossipController"
-            style="-fx-background-color:rgb(210,101,219);"
+            style="-fx-background-color:rgb(202,92,202);"
             prefHeight="400.0" prefWidth="600.0">
 
-    <Button text="Peek at the secrets🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #d265db; -fx-text-fill: #ffffff;"/>
+    <Button text="Peek at the secrets🤫" onAction="#onPeekatthesecretsButtonClick" style="-fx-background-color: #ca5cca; -fx-text-fill: #d265db;"/>
+    <TextArea fx:id="chatDisplay"
+              editable="false"
+              wrapText="true"
+              AnchorPane.topAnchor="60"
+              AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20"
+              AnchorPane.bottomAnchor="100"
+              style="-fx-control-inner-background: white;" />
 
     <StackPane AnchorPane.leftAnchor="20"
                AnchorPane.rightAnchor="20"
@@ -21,26 +29,25 @@
 
 
 
-    <TextArea fx:id="gossipTextArea"
-              style="-fx-control-inner-background: white;
+        <TextArea fx:id="gossipTextArea"
+                  style="-fx-control-inner-background: white;
               -fx-text-fill: rgb(210,101,219);"
-              prefHeight="60"
-              prefWidth="560"
-              AnchorPane.bottomAnchor="20"
-              AnchorPane.leftAnchor="20"
-              AnchorPane.rightAnchor="20"
-              prefRowCount="6"
-              wrapText="true"
-              promptText="Spill the tea...🫖"/>
+                  prefHeight="60"
+                  prefWidth="560"
+                  AnchorPane.bottomAnchor="20"
+                  AnchorPane.leftAnchor="20"
+                  AnchorPane.rightAnchor="20"
+                  prefRowCount="6"
+                  wrapText="true"
+                  promptText="Spill the tea...🫖"/>
 
-    <Button text="Send"
-            onAction="#onSendGossip"
-            style="-fx-background-color: transparent; -fx-text-fill: black;"
-             prefHeight="30" prefWidth="60"
-             StackPane.alignment="BOTTOM_RIGHT"/>
+        <Button text="Send"
+                onAction="#onSendGossip"
+                style="-fx-background-color: transparent; -fx-text-fill: black;"
+                prefHeight="30" prefWidth="60"
+                StackPane.alignment="BOTTOM_RIGHT"/>
 
 
 
     </StackPane>
 </AnchorPane>
-

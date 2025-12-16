@@ -3,28 +3,29 @@ package com.example.gossipgirl_;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
-import java.io.IOException;
+import javafx.stage.Stage;
 
 public class ViewSwitcher {
-    private static Scene scene;
 
-    public static void setScene(Scene scene) {
-        ViewSwitcher.scene = scene;
+    private static Stage stage;
+
+    public static void setStage(Stage primaryStage) {
+        stage = primaryStage;
     }
 
     public static void switchTo(View view) {
-        if (scene == null) {
-            System.out.println("no scene selected");
-            return;
-        }
         try {
-            Parent root = FXMLLoader.load(
-                    ViewSwitcher.class.getResource(view.getFileName())
+            FXMLLoader loader = new FXMLLoader(
+                    ViewSwitcher.class.getResource(
+                            "/com/example/gossipgirl_/" + view.getFileName()
+                    )
             );
-            scene.setRoot(root);
-        }
-        catch (IOException e) {
+
+            Parent root = loader.load();
+            stage.setScene(new Scene(root));
+
+        } catch (Exception e) {
+            System.out.println("❌ Failed to load view: " + view);
             e.printStackTrace();
         }
     }
